@@ -1,0 +1,5 @@
+print(int(9.8))
+print(float(25))
+print(max(4, 12, 7, 3, 5))
+print(min(20, 5, 18, 9, 3))
+print(int("42"))

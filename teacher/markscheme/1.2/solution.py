@@ -1,0 +1,6 @@
+print(8 + 2)
+print(10 - 3)
+print(4 * 7)
+print(100 / 5)
+print(2 ** 8)
+print(100 % 7)

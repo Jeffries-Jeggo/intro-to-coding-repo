@@ -1,0 +1,5 @@
+print("Python Programming".upper())
+print("mammoth".count("m"))
+print("hello".capitalize())
+print(len("Computer Science"))
+print("12345".isdigit())

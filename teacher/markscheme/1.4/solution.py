@@ -1,0 +1,6 @@
+print(max(4 + 1, 6 - 1))
+print(min(10 + 2, 15 - 3))
+print(abs(5 - 20))
+print(int(7.5 + 2.3))
+print(max(3 * 2, 20 / 2))
+print(min(10 * 2, 50 / 2))

@@ -1,0 +1,40 @@
+{
+  "name": "Intro to Coding",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": false,
+        "python.formatting.provider": "black",
+        "editor.inlineSuggest.enabled": false,
+        "editor.quickSuggestions": {
+          "other": false,
+          "comments": false,
+          "strings": false
+        },
+        "github.copilot.enable": {
+          "*": false,
+          "python": false,
+          "plaintext": false,
+          "markdown": false
+        },
+        "terminal.integrated.fontSize": 14,
+        "editor.fontSize": 14
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install pytest --quiet",
+  "remoteUser": "root"
+}
