@@ -1,0 +1,10 @@
+{
+  "VsCodeTaskButtons.showCounter": false,
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(beaker) Run Current Test",
+      "task": "Run Active Exercise Test",
+      "tooltip": "Click to run tests for the exercise file you are actively working on."
+    }
+  ]
+}
