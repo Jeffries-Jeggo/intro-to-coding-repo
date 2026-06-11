@@ -1,5 +1,7 @@
 import pytest
 import os
+import importlib.util
+from pathlib import Path
 
 def test_1_1_exists():
     """Test that student.py exists"""
@@ -22,3 +24,19 @@ def test_1_1_runs():
         exec(code, {"__name__": "__main__"})
     except Exception as e:
         pytest.fail("Error running student.py: " + str(e))
+
+def test_student_output(capsys):
+    # 1. Construct the absolute or relative path to the student file
+    # This points to: exercises/1-Functions-and-Arithmetic-Operators/1.1/student.py
+    student_file_path = Path("exercises/1-Functions-and-Arithmetic-Operators/1.1/student.py")
+    
+    # 2. Use importlib to load the module from its file path safely
+    spec = importlib.util.spec_from_file_location("student_module", student_file_path)
+    student_module = importlib.util.module_from_spec(spec)
+    
+    # 3. Execute the module (this triggers their print statements)
+    spec.loader.exec_module(student_module)
+    
+    # 4. Capture and assert the stdout
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Hello, World!"

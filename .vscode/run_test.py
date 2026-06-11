@@ -16,7 +16,8 @@ def main():
     exercise_id = active_file.parent.name
     test_filename = f"test_{exercise_id.replace(',','_')}.py"
 
-    test_path = Path("tests") / exercise_id / test_filename
+    test_file_suffix = exercise_id.replace('.', '_')
+    test_path = Path("tests") / exercise_id / f"test_{test_file_suffix}.py"
 
     if not test_path.exists():
         print(f"Expected test file missing at : {test_path}")
